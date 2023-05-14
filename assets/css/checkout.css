@@ -96,7 +96,7 @@
 .phone-container .lavel {
   position: absolute;
   left: 10px;
-  top: 14px;
+  top: 5px;
   transition: all 0.2s;
   padding: 5px 2px 0 80px;
   z-index: 1;
@@ -113,7 +113,7 @@
   font-size: 18px;
   outline: none;
   transition: all 0.3s;
-  color: #fff;
+  color: #000000;
 }
 .phone-container .lavel::before {
   content: "";
@@ -126,14 +126,17 @@
   width: 54%;
   z-index: -1;
 }
-.phone-container .text-input:focus {
+/* .phone-container .text-input:focus {
   border: 2px solid #9b9c9d;
-}
+} */
 .phone-container .text-input:focus + .lavel,
 .field {
   top: -18px;
-  color: #9b9c9d;
+  color: #345094;
   font-size: 14px;
+}
+.phone-container .text-input:valid + .lavel,.field {
+  top: -18px;
 }
 .text-input::placeholder {
   font-size: 16px;
@@ -258,13 +261,13 @@
   height: 100%;
   border: 2px solid #9b9c9d;
   background-color: white;
-  /* background-color: white; */
   border-radius: 5px;
   font-size: 18px;
   outline: none;
   transition: all 0.3s;
-  color: #9b9c9d;
+  color: #000;
 }
+
 .lavel::before {
   content: "";
   height: 5px;
@@ -284,6 +287,13 @@
   color: #345094;
   font-size: 14px;
 }
+.text-input:valid + label, .field {
+  top: -10px;
+}
+/* .text-input:not(:placeholder-shown) + .label,
+.text-input:focus + .label {
+  top: -10px;
+} */
 .text-input::placeholder {
   font-size: 16px;
   opacity: 0;
@@ -313,7 +323,7 @@
   box-sizing: border-box;
 }
 .select {
-  /* height: 80px; */
+  height: 50px;
   margin: 10px 5px 10px 0;
   background: white;
   color: #9b9c9d;
